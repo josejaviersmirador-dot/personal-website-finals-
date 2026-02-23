@@ -1,17 +1,37 @@
 <template>
-  <div class="page-container">
-    <h1>Project Gallery</h1>
-    <div class="gallery-grid">
-      <div class="placeholder-box">Image Placeholder</div>
-      <div class="placeholder-box">Image Placeholder</div>
-    </div>
-    <router-link to="/" class="back-link">← Back to Home</router-link>
+  <div class="gallery-page">
+    <router-link to="/" class="home-fab"><i class="bi bi-house-door-fill"></i></router-link>
+    
+    <h1 class="page-title">PHOTO GALLERY</h1>
+
+    <section class="gallery-section">
+      <h2 class="section-label"><i class="bi bi-person-bounding-box"></i> ME</h2>
+      <div class="photo-grid">
+        <div class="photo-card"><img src="/image/me1.jpg" alt="Me"></div>
+        <div class="photo-card"><img src="/image/me2.jpg" alt="Me"></div>
+        <div class="photo-card"><img src="/image/me3.jpg" alt="Me"></div>
+        <div class="photo-card"><img src="/image/me4.jpg" alt="Me"></div>
+      </div>
+    </section> Section
+
+    <section class="gallery-section">
+      <h2 class="section-label"><i class="bi bi-people-fill"></i> FRIENDS</h2>
+      <div class="photo-grid">
+        <div class="photo-card"><img src="/image/f1.jpg" alt="Friends"></div>
+        <div class="photo-card"><img src="/image/f2.jpg" alt="Friends"></div>
+        <div class="photo-card"><img src="/image/f3.jpg" alt="Friends"></div>
+        <div class="photo-card"><img src="/image/f4.jpg" alt="Friends"></div>
+      </div>
+    </section>
   </div>
 </template>
 
 <style scoped>
-.page-container { padding: 50px; color: white; text-align: center; }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
-.placeholder-box { background: rgba(255,255,255,0.1); height: 200px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-.back-link { color: #06b6d4; text-decoration: none; }
+.gallery-page { background-color: #0b1121; min-height: 100vh; padding: 40px; color: white; font-family: sans-serif; }
+.home-fab { position: fixed; top: 20px; left: 20px; background: #06b6d4; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; text-decoration: none; z-index: 10; }
+.page-title { text-align: center; letter-spacing: 4px; margin-bottom: 50px; font-weight: 800; }
+.section-label { color: #06b6d4; font-size: 1rem; margin-bottom: 20px; display: flex; gap: 10px; align-items: center; text-transform: uppercase; }
+.photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 60px; }
+.photo-card { aspect-ratio: 1/1; background: #1e293b; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+.photo-card img { width: 100%; height: 100%; object-fit: cover; }
 </style>
