@@ -20,6 +20,28 @@
         <div class="card about-card">
           <div class="card-title">ABOUT ME</div>
           <p class="content-text">Hello! I'm JV, a second-year IT student at Asia Pacific College. I'm passionate about technology, and hands-on electronics.</p>
+          
+          <div class="social-links">
+            <a href="https://web.facebook.com/sirjosie/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sirjosie/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://open.spotify.com/user/31mgjf4ea65lbj3y7m7peli3mdi4?si=6da12911a870432d" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-spotify"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jose-javier-mirador-52299a321/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/josejaviersmirador-dot" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github"></i>
+            </a>
+            
+            <router-link to="/profile" class="expand-btn">
+              <i class="bi bi-box-arrow-up-right"></i>
+            </router-link>
+          </div>
         </div>
 
         <div class="card course-card">
@@ -199,13 +221,43 @@
 }
 
 .pill { 
-  background: rgba(255,255,255,0.05); 
+ background: rgba(255,255,255,0.05); 
   border: 1px solid #334155; 
   padding: 15px; 
   border-radius: 30px; 
   text-align: center; 
   margin-bottom: 12px; 
   color: #f8fafc;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+  font-size: 1.8rem;
+  align-items: center;
+}
+
+.social-links a {
+  color: #f8fafc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.social-links a i {
+  pointer-events: none; 
+}
+
+.social-links a:hover,
+.expand-btn:hover i {
+  color: #06b6d4;
+  transform: scale(1.15);
 }
 
 .interest-icons { 
