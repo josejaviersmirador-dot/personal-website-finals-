@@ -82,10 +82,11 @@
 
 <style scoped>
 .portfolio-container { 
-  padding: 30px; 
+  padding: 40px; 
   width: 100%; 
   min-height: 100vh; 
-  box-sizing: border-box;
+  margin: 0; 
+  box-sizing: border-box; 
   background-color: #0b1121;
 }
 
@@ -108,8 +109,10 @@
 
 .dashboard-layout { 
   display: grid; 
-  grid-template-columns: 420px 1fr;
-  margin-bottom: 25px; 
+  grid-template-columns: 450px 1fr; 
+  gap: 30px; 
+  width: 100%; 
+  margin-bottom: 20px; 
 }
 
 .info-grid { 
@@ -122,31 +125,59 @@
   background: #162031; 
   border: 1px solid #1e293b; 
   border-radius: 16px; 
-  padding: 25px; 
-  color: #ffffff;
+  padding: 30px; 
 }
 
 .card-title { 
   color: #06b6d4; 
-  font-size: 0.75rem; 
+  font-size: 0.85rem; 
   font-weight: bold; 
   margin-bottom: 20px; 
   display: flex; 
   align-items: center; 
   gap: 10px; 
+  text-transform: uppercase;
 }
 
 .hero-card { 
   padding: 0; 
   overflow: hidden; 
   height: 100%; 
-  min-height: 600px;
+  min-height: 600px; 
+  position: relative; 
+  border-radius: 16px; 
+  cursor: pointer; 
 }
 
 .hero-img { 
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
+}
+
+.overlay {
+  position: absolute; 
+  inset: 0; 
+  background: rgba(6, 182, 212, 0.4); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.hero-card:hover .overlay { 
+  opacity: 1; 
+}
+
+.overlay span { 
+  background: #06b6d4; 
+  color: white; 
+  padding: 12px 24px; 
+  border-radius: 30px; 
+  font-weight: bold; 
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .timeline { 
@@ -158,6 +189,7 @@
 .timeline li { 
   margin-bottom: 15px; 
   position: relative; 
+  font-size: 0.9rem;
 }
 
 .timeline li::before { 
@@ -180,6 +212,33 @@
   text-align: center; 
   margin-bottom: 12px; 
 }
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.social-links i {
+  color: white;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.social-links i:hover {
+  color: #06b6d4;
+}
+
+.interests-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 2.5rem;
+  justify-content: center;
+  margin-top: 30px;
+  color: #cbd5e1;
+}
+
 .comment-section { 
   margin-top: 10px; 
 }
@@ -195,6 +254,7 @@
   color: white; 
   padding: 15px; 
   border-radius: 10px; 
+  font-family: inherit;
 }
 
 .post-btn { 
@@ -206,6 +266,11 @@
   font-weight: bold; 
   cursor: pointer; 
   justify-self: end; 
+  transition: background 0.3s ease;
+}
+
+.post-btn:hover {
+  background: #0891b2;
 }
 
 .footer { 
