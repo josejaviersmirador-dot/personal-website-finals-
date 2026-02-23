@@ -99,6 +99,7 @@ const isMuted = ref(false);
 const currentTime = ref(0);
 const duration = ref(0);
 
+// FIXED: Added leading slashes to all local paths
 const tracks = {
   pop1: { label: 'Pop', title: 'Birds of a feather', src: '/audio/pop1.mp3', color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)' },
   pop2: { label: 'Pop', title: 'Shape of You', src: '/audio/pop2.mp3', color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)' },
