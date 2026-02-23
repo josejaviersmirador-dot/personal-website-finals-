@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jose Mirador's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  
+  <!-- Your name -->
+  <h2>Jose Mirador</h2>
+  
+  <!-- Introduction -->
+  <p>Hello! My name is Jose Mirador. I’m passionate about technology, cybersecurity, and hands-on electronics. 
+     This website is a space to share my projects, ideas, and personal interests.</p>
+  
+  <!-- Image section -->
+  <div>
+    <!-- Replace the URL below with your own image link -->
+    <img src="https://i.pinimg.com/736x/14/20/fd/1420fdb2c1b84a55bc9a61e3050b0fa5.jpg" alt="Jose Mirador" width="300">
+  </div>
+</body>
+</html>

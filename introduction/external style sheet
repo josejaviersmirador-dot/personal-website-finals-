@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>External Style</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      background-color: #00bfa5;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    p {
+      background-color: #263238;
+      color: #b2dfdb;
+      padding: 12px;
+      border-left: 5px solid #00bfa5;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>External Style</h1>
+
+<p>This page uses an embedded stylesheet with a dark theme and teal accents.</p>
+
+<p>The styles are applied to the body, header, and paragraphs using clean CSS rules.</p>
+
+</body>
+</html>
