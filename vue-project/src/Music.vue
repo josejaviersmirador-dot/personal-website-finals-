@@ -95,31 +95,31 @@ const tracks = {
   },
   rb1: { 
     label: 'R&B', 
-    title: 'R&B Track 1', 
+    title: "Nothing's Gonna Change My Love For You", 
     src: '/audio/rb1.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   rb2: { 
     label: 'R&B', 
-    title: 'R&B Track 2', 
+    title: "If Ever You're In My Arms Again", 
     src: '/audio/rb2.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   rb3: { 
     label: 'R&B', 
-    title: 'R&B Track 3', 
+    title: "All My Life", 
     src: '/audio/rb3.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   rb4: { 
     label: 'R&B', 
-    title: 'R&B Track 4', 
+    title: "On Bended Knee", 
     src: '/audio/rb4.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   rb5: { 
     label: 'R&B', 
-    title: 'R&B Track 5', 
+    title: "Don't Know What to Say", 
     src: '/audio/rb5.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
