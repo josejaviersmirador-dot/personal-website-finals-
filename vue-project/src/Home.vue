@@ -217,27 +217,30 @@
 
 .social-links {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
-  font-size: 1.5rem;
+  gap: 25px;
+  margin-top: 25px;
+  font-size: 1.8rem;
+  align-items: center;
 }
 
-.social-links i {
-  color: white;
-  transition: color 0.3s ease;
+.social-links i, .social-links a {
+  color: #f8fafc;
+  background: transparent !important;
+  text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .social-links i:hover {
   color: #06b6d4;
 }
 
-.interest-icons, .interests-icons { 
+.interest-icons { 
   display: flex; 
-  gap: 20px; 
+  gap: 35px;
   font-size: 2.5rem; 
   justify-content: center; 
-  margin-top: 20px; 
+  margin-top: 30px; 
   color: #cbd5e1;
 }
 
