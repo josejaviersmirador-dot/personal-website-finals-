@@ -54,7 +54,7 @@
         <div class="card card-education">
             <div class="card-title">
                 <i class="bi bi-trophy-fill"></i> Education & Achievement
-            <div class="card-content">
+            </div> <div class="card-content">
                 <ul class="compact-list">
                     <li><strong>MCA Montessori School</strong> - Elementary (1-6)</li>
                     <li><strong>MCA Montessori School</strong> - JHS (7-8)</li>
@@ -138,9 +138,9 @@ const submitComment = async () => {
     });
     
     if (response.ok) {
-      newName.value = '';      // Clear the name box
-      newMessage.value = '';   // Clear the message box
-      fetchComments();         // Refresh the list invisibly
+      newName.value = '';      
+      newMessage.value = '';   
+      fetchComments();         
       alert("Comment successfully posted!");
     }
   } catch (error) {
@@ -155,6 +155,7 @@ onMounted(() => {
 </script>
 
 <style>
+/* CSS remains the same as before */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: #0b1121;
