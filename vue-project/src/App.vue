@@ -12,7 +12,7 @@
         </header>
 
         <div class="card card-gallery">
-            <img src="./image/download.jpg" alt="Jose Mirador" class="gallery-img">
+            <img src="/image/download.jpg" alt="Jose Mirador" class="gallery-img">
             <a href="gallery.html" class="gallery-overlay-full">
                 <span>View Gallery</span>
             </a>
