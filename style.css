@@ -171,10 +171,13 @@ body {
     line-height: 1.5;
     color: #f1f5f9;
 }
-.social-icons { display: flex; gap: 12px; margin-top: auto; }
-.social-icons span {
-    color: #f1f5f9; font-size: 1.5rem; display: flex; align-items: center;
-    transition: all 0.3s ease; cursor: default;
+.social-icons i {
+  color: #f8fafc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.social-icons i:hover {
+  color: #06b6d4;
 }
 .social-icons span:hover {
     color: #06b6d4; transform: translateY(-3px);

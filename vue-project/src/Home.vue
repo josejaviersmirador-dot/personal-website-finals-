@@ -126,6 +126,7 @@
   border: 1px solid #1e293b; 
   border-radius: 16px; 
   padding: 30px; 
+  color: #f8fafc;
 }
 
 .card-title { 
@@ -205,12 +206,13 @@
 }
 
 .pill { 
-  background: rgba(255,255,255,0.05); 
+ background: rgba(255,255,255,0.05); 
   border: 1px solid #334155; 
   padding: 15px; 
   border-radius: 30px; 
   text-align: center; 
   margin-bottom: 12px; 
+  color: #f8fafc;
 }
 
 .social-links {
@@ -230,12 +232,12 @@
   color: #06b6d4;
 }
 
-.interests-icons {
-  display: flex;
-  gap: 20px;
-  font-size: 2.5rem;
-  justify-content: center;
-  margin-top: 30px;
+.interest-icons, .interests-icons { 
+  display: flex; 
+  gap: 20px; 
+  font-size: 2.5rem; 
+  justify-content: center; 
+  margin-top: 20px; 
   color: #cbd5e1;
 }
 
