@@ -4,7 +4,7 @@
     
     <div class="profile-container">
       <div class="profile-sidebar">
-        <img src="/image/side.jpg" alt="Profile" class="main-portrait">
+        <img src="/image/okada.jpg" alt="Profile" class="main-portrait">
       </div>
 
       <div class="profile-details">

@@ -19,7 +19,7 @@
       <div class="photo-grid">
         <div class="photo-card"><img src="/image/BBQ.jpg" alt="BBQ"></div>
         <div class="photo-card"><img src="/image/gala.jpg" alt="Gala"></div>
-        <div class="photo-card"><img src="/image/okada.jpg" alt="Okada"></div>
+        <div class="photo-card"><img src="/image/trio.jpg" alt="trio"></div>
         <div class="photo-card"><img src="/image/outing.jpg" alt="Outing"></div>
       </div>
     </section>
