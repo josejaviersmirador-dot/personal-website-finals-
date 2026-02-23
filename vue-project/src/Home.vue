@@ -9,7 +9,7 @@
     <div class="dashboard-layout">
       <router-link to="/gallery" class="hero-link">
         <div class="card hero-card">
-          <<img src="/image/download.jpg" alt="Jose Mirador" class="hero-img">
+          <img src="/image/download.jpg" alt="Jose Mirador" class="hero-img">
           <div class="overlay">
             <span>View Photo Gallery</span>
           </div>
