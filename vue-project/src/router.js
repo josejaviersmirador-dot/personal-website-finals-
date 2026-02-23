@@ -6,9 +6,9 @@ import Resources from './Resources.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/gallery.html', component: Gallery },
-  { path: '/profile.html', component: Profile },
-  { path: '/Resources.html', component: Resources }
+  { path: '/gallery', component: Gallery },
+  { path: '/profile', component: Profile },
+  { path: '/resources', component: Resources }
 ]
 
 const router = createRouter({
