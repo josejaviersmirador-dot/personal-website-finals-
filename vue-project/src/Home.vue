@@ -17,7 +17,6 @@
       </router-link>
 
       <div class="info-grid">
-        
         <div class="card about-card">
           <div class="card-title">ABOUT ME</div>
           <p class="content-text">Hello! I'm JV, a second-year IT student at Asia Pacific College. I'm passionate about technology, and hands-on electronics.</p>
@@ -239,20 +238,26 @@
   align-items: center;
 }
 
-.social-links i, .social-links a {
+.social-links a {
   color: #f8fafc;
-  background: transparent !important;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
-.social-links i:hover {
-  color: #06b6d4;
+.social-links a i {
+  pointer-events: none; 
 }
 
-.expand-btn i:hover {
+.social-links a:hover,
+.expand-btn:hover i {
   color: #06b6d4;
+  transform: scale(1.15);
 }
 
 .interest-icons { 
