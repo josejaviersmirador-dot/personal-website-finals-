@@ -66,7 +66,7 @@ const tracks = {
   pop: { 
     label: 'Pop', 
     title: 'Placeholder Pop Track', 
-    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    src: 'https://youtu.be/lRBSOe3AggM?si=ilFHJSJwZqqlDG3-',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   rb: { 
