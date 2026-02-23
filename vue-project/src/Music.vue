@@ -93,10 +93,34 @@ const tracks = {
     src: '/audio/pop5.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
-  rb: { 
+  rb1: { 
     label: 'R&B', 
-    title: 'Placeholder R&B Track', 
-    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    title: 'R&B Track 1', 
+    src: '/audio/rb1.mp3',
+    color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  rb2: { 
+    label: 'R&B', 
+    title: 'R&B Track 2', 
+    src: '/audio/rb2.mp3',
+    color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  rb3: { 
+    label: 'R&B', 
+    title: 'R&B Track 3', 
+    src: '/audio/rb3.mp3',
+    color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  rb4: { 
+    label: 'R&B', 
+    title: 'R&B Track 4', 
+    src: '/audio/rb4.mp3',
+    color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  rb5: { 
+    label: 'R&B', 
+    title: 'R&B Track 5', 
+    src: '/audio/rb5.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   rock: { 
