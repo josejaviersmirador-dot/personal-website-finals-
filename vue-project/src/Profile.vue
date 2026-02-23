@@ -29,23 +29,10 @@
           <span class="value">Manila</span>
         </div>
 
-       <div class="social-links">
-  <a href="https://web.facebook.com/sirjosie/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/sirjosie/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://open.spotify.com/user/31mgjf4ea65lbj3y7m7peli3mdi4?si=6da12911a870432d" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-spotify"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/jose-javier-mirador-52299a321/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com/josejaviersmirador-dot" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
+        <div class="social-row">
+          <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i>
+          <i class="bi bi-spotify"></i> <i class="bi bi-linkedin"></i> <i class="bi bi-github"></i>
+        </div>
 
         <div class="email-grid">
           <div class="email-box"><i class="bi bi-google"></i> jvjaviermirador@gmail.com</div>

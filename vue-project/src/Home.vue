@@ -17,12 +17,28 @@
       </router-link>
 
       <div class="info-grid">
+        
         <div class="card about-card">
           <div class="card-title">ABOUT ME</div>
           <p class="content-text">Hello! I'm JV, a second-year IT student at Asia Pacific College. I'm passionate about technology, and hands-on electronics.</p>
-          <div class="social-icons">
-            <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i>
-            <i class="bi bi-spotify"></i> <i class="bi bi-linkedin"></i> <i class="bi bi-github"></i>
+          
+          <div class="social-links">
+            <a href="https://web.facebook.com/sirjosie/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sirjosie/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://open.spotify.com/user/31mgjf4ea65lbj3y7m7peli3mdi4?si=6da12911a870432d" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-spotify"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jose-javier-mirador-52299a321/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/josejaviersmirador-dot" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github"></i>
+            </a>
+            
             <router-link to="/profile" class="expand-btn">
               <i class="bi bi-box-arrow-up-right"></i>
             </router-link>
@@ -232,6 +248,10 @@
 }
 
 .social-links i:hover {
+  color: #06b6d4;
+}
+
+.expand-btn i:hover {
   color: #06b6d4;
 }
 
