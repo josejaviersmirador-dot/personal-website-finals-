@@ -80,7 +80,11 @@
             </router-link>
             <i class="bi bi-joystick"></i>
           </div>
-        </div> </div> </div> <div class="card comment-section">
+        </div>
+      </div>
+    </div>
+
+    <div class="card comment-section">
       <div class="card-title"><i class="bi bi-chat-left-dots"></i> LEAVE A COMMENT</div>
       <div class="comment-form">
         <input type="text" placeholder="Name">
