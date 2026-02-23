@@ -65,31 +65,31 @@ const currentGenre = ref('pop1');
 const tracks = {
   pop1: { 
     label: 'Pop', 
-    title: 'Track 1', 
+    title: 'Birds of a feather', 
     src: '/audio/pop1.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop2: { 
     label: 'Pop', 
-    title: 'Track 2', 
+    title: 'Shape of You', 
     src: '/audio/pop2.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop3: { 
     label: 'Pop', 
-    title: 'Track 3', 
+    title: 'Lowkey', 
     src: '/audio/pop3.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop4: { 
     label: 'Pop', 
-    title: 'Track 4', 
+    title: 'Roses', 
     src: '/audio/pop4.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop5: { 
     label: 'Pop', 
-    title: 'Track 5', 
+    title: 'Blinding lights', 
     src: '/audio/pop5.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
