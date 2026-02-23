@@ -123,10 +123,22 @@ const tracks = {
     src: '/audio/rb5.mp3',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
-  rock: { 
+  rock1: { 
     label: 'Rock', 
-    title: 'Placeholder Rock Track', 
-    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+    title: 'Home', 
+    src: '/audio/rock1.mp3',
+    color: 'linear-gradient(135deg, #434343 0%, #000000 100%)'
+  },
+  rock2: { 
+    label: 'Rock', 
+    title: 'Dont stop me now', 
+    src: '/audio/rock2.mp3',
+    color: 'linear-gradient(135deg, #434343 0%, #000000 100%)'
+  },
+  rock3: { 
+    label: 'Rock', 
+    title: 'Photograph', 
+    src: '/audio/rock3.mp3',
     color: 'linear-gradient(135deg, #434343 0%, #000000 100%)'
   },
   emo: { 
