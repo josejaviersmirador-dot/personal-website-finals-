@@ -49,7 +49,14 @@
 
 .profile-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; max-width: 1000px; width: 100%; }
 
-.main-portrait { width: 100%; height: 600px; object-fit: cover; border-radius: 20px; border: 1px solid #1e293b; }
+.main-portrait { width: 100%; height: auto; 
+  aspect-ratio: 3 / 4;
+  object-fit: cover; 
+  border-radius: 20px; 
+  border: 1px 
+  solid #1e293b; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
 .profile-details { display: flex; flex-direction: column; gap: 15px; justify-content: center; }
 
