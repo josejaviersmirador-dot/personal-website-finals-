@@ -8,7 +8,7 @@
       <h2 class="section-label"><i class="bi bi-person-bounding-box"></i> ME</h2>
       <div class="photo-grid">
         <div class="photo-card"><img src="/image/me1.jpg" alt="Me"></div>
-        <div class="photo-card"><img src="/image/me2.jpg" alt="Me"></div>
+<div class="photo-card"><img src="/image/me2.jpg" alt="Me"></div>
         <div class="photo-card"><img src="/image/me3.jpg" alt="Me"></div>
         <div class="photo-card"><img src="/image/me4.jpg" alt="Me"></div>
       </div>
