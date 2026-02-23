@@ -74,13 +74,13 @@
         <div class="card interest-card">
           <div class="card-title"><i class="bi bi-controller"></i> INTERESTS</div>
           <div class="interest-icons">
-            <i class="bi bi-book"></i> <i class="bi bi-music-note-beamed"></i> <i class="bi bi-joystick"></i>
+            <i class="bi bi-book"></i> 
+            <router-link to="/music" class="music-link" title="Play some tunes!">
+              <i class="bi bi-music-note-beamed"></i>
+            </router-link>
+            <i class="bi bi-joystick"></i>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card comment-section">
+        </div> </div> </div> <div class="card comment-section">
       <div class="card-title"><i class="bi bi-chat-left-dots"></i> LEAVE A COMMENT</div>
       <div class="comment-form">
         <input type="text" placeholder="Name">
@@ -308,5 +308,18 @@
   padding: 30px; 
   color: #475569; 
   font-size: 0.8rem; 
+}
+
+.music-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.music-link:hover {
+  color: #06b6d4;
+  transform: scale(1.15);
 }
 </style>
