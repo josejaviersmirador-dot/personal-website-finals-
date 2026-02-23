@@ -14,12 +14,12 @@
         @change="selectGenre($event.target.value)"
       >
         <option v-for="(track, key) in tracks" :key="key" :value="key">
-          {{ track.label }}
+          {{ track.label }} - {{ track.title }}
         </option>
       </select>
     </div>
 
-    <div class="turntable-wrapper">
+    <div v-if="tracks[currentGenre]" class="turntable-wrapper">
       <div class="now-playing">
         <h3>{{ tracks[currentGenre].label }} Vibe</h3>
         <p>{{ tracks[currentGenre].title }}</p>
@@ -60,36 +60,38 @@ import { ref, nextTick } from 'vue';
 
 const isPlaying = ref(false);
 const audioPlayer = ref(null);
-const currentGenre = ref('pop');
+
+// FIXED: Changed 'pop' to 'pop1' to match your tracks object keys
+const currentGenre = ref('pop1');
 
 const tracks = {
   pop1: { 
     label: 'Pop', 
-    title: 'First Pop Track', 
+    title: 'Track 1', 
     src: '/audio/pop1.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop2: { 
     label: 'Pop', 
-    title: 'Second Pop Track', 
+    title: 'Track 2', 
     src: '/audio/pop2.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop3: { 
     label: 'Pop', 
-    title: 'Third Pop Track', 
+    title: 'Track 3', 
     src: '/audio/pop3.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop4: { 
     label: 'Pop', 
-    title: 'Fourth Pop Track', 
+    title: 'Track 4', 
     src: '/audio/pop4.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   pop5: { 
     label: 'Pop', 
-    title: 'Fifth Pop Track', 
+    title: 'Track 5', 
     src: '/audio/pop5.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
@@ -135,7 +137,6 @@ const trackKeys = Object.keys(tracks);
 
 const selectGenre = async (key, forcePlay = false) => {
   if (currentGenre.value === key) return;
-
   const wasPlaying = isPlaying.value;
 
   if (isPlaying.value && audioPlayer.value) {
@@ -170,6 +171,8 @@ const handleTrackEnd = () => {
 };
 
 const togglePlay = () => {
+  if (!audioPlayer.value) return;
+  
   if (isPlaying.value) {
     audioPlayer.value.pause();
   } else {
@@ -180,6 +183,7 @@ const togglePlay = () => {
 </script>
 
 <style scoped>
+/* Keeping your styles exactly the same as they were perfect */
 .music-container {
   padding: 40px;
   min-height: 100vh;
