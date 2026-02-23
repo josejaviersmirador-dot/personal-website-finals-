@@ -8,5 +8,6 @@ body {
   padding: 0;
   background-color: #0b1121;
   font-family: 'Inter', sans-serif;
+  color: white;
 }
 </style>
