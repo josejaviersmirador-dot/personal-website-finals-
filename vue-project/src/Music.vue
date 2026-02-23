@@ -63,10 +63,34 @@ const audioPlayer = ref(null);
 const currentGenre = ref('pop');
 
 const tracks = {
-  pop: { 
+  pop1: { 
     label: 'Pop', 
-    title: 'Placeholder Pop Track', 
-    src: 'https://youtu.be/lRBSOe3AggM?si=ilFHJSJwZqqlDG3-',
+    title: 'First Pop Track', 
+    src: '/audio/pop1.mp3',
+    color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
+  },
+  pop2: { 
+    label: 'Pop', 
+    title: 'Second Pop Track', 
+    src: '/audio/pop2.mp3',
+    color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
+  },
+  pop3: { 
+    label: 'Pop', 
+    title: 'Third Pop Track', 
+    src: '/audio/pop3.mp3',
+    color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
+  },
+  pop4: { 
+    label: 'Pop', 
+    title: 'Fourth Pop Track', 
+    src: '/audio/pop4.mp3',
+    color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
+  },
+  pop5: { 
+    label: 'Pop', 
+    title: 'Fifth Pop Track', 
+    src: '/audio/pop5.mp3',
     color: 'linear-gradient(135deg, #ff0844 0%, #ffb199 100%)'
   },
   rb: { 
