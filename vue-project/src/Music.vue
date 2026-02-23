@@ -60,8 +60,6 @@ import { ref, nextTick } from 'vue';
 
 const isPlaying = ref(false);
 const audioPlayer = ref(null);
-
-// FIXED: Changed 'pop' to 'pop1' to match your tracks object keys
 const currentGenre = ref('pop1');
 
 const tracks = {
