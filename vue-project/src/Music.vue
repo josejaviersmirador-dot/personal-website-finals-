@@ -64,21 +64,17 @@
         </button>
       </div>
 
-      <div class="extra-controls">
-        <div class="volume-box">
-          <button @click="toggleMute" class="icon-btn">
-            <i :class="isMuted ? 'bi bi-volume-mute-fill' : 'bi bi-volume-up-fill'"></i>
-          </button>
-          <input 
-            type="range" 
-            min="0" 
-            max="1" 
-            step="0.01" 
-            v-model="volume" 
-            @input="updateVolume" 
-            class="volume-slider"
-          />
-        </div>
+      <div class="volume-container">
+        <i :class="isMuted || volume == 0 ? 'bi bi-volume-mute' : 'bi bi-volume-up'" @click="toggleMute" class="vol-icon"></i>
+        <input 
+          type="range" 
+          min="0" 
+          max="1" 
+          step="0.01" 
+          v-model="volume" 
+          @input="updateVolume" 
+          class="volume-slider"
+        />
       </div>
 
       <audio 
@@ -244,39 +240,43 @@ option { background: #162031; color: white; padding: 12px; }
 .now-playing p { color: #f8fafc; font-size: 1.2rem; font-weight: bold; margin: 0; }
 
 .vinyl-record {
-  width: 230px; height: 230px; background: #111; border-radius: 50%;
+  width: 220px; height: 220px; background: #111; border-radius: 50%;
   display: flex; justify-content: center; align-items: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8); margin-bottom: 30px; cursor: pointer; position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8); margin-bottom: 25px; cursor: pointer; position: relative;
 }
 .record-grooves {
   position: absolute; width: 90%; height: 90%; border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.05);
   background: repeating-radial-gradient(#111 0%, #1a1a1a 2%, #111 4%);
 }
-.record-label { width: 75px; height: 75px; border-radius: 50%; z-index: 2; display: flex; justify-content: center; align-items: center; }
+.record-label { width: 70px; height: 70px; border-radius: 50%; z-index: 2; display: flex; justify-content: center; align-items: center; }
 .center-hole { width: 12px; height: 12px; background: #0b1121; border-radius: 50%; }
 .playing { animation: spin 3s linear infinite; }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-.progress-container {
-  width: 100%; display: flex; align-items: center; gap: 10px; margin-bottom: 25px;
-}
-.time { font-size: 0.8rem; color: #94a3b8; min-width: 35px; }
-.progress-bar {
-  flex: 1; accent-color: #06b6d4; height: 4px; cursor: pointer;
-}
+.progress-container { width: 100%; display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.time { font-size: 0.75rem; color: #94a3b8; min-width: 35px; }
+.progress-bar { flex: 1; accent-color: #06b6d4; height: 4px; cursor: pointer; }
 
-.controls { display: flex; align-items: center; gap: 25px; margin-bottom: 25px; }
+.controls { display: flex; align-items: center; gap: 25px; margin-bottom: 20px; }
 .control-btn { background: transparent; color: #94a3b8; border: none; font-size: 1.8rem; cursor: pointer; transition: all 0.3s; }
 .control-btn:hover { color: #f8fafc; transform: scale(1.1); }
 .play-btn {
-  background: #06b6d4; color: #0b1121; border: none; width: 60px; height: 60px;
-  border-radius: 50%; font-size: 2.2rem; display: flex; justify-content: center; align-items: center;
+  background: #06b6d4; color: #0b1121; border: none; width: 55px; height: 55px;
+  border-radius: 50%; font-size: 2rem; display: flex; justify-content: center; align-items: center;
   cursor: pointer; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
 }
 
-.extra-controls { width: 100%; display: center; justify-content: center; }
-.volume-box { display: flex; align-items: center; gap: 12px; width: 60%; }
-.icon-btn { background: none; border: none; color: #06b6d4; font-size: 1.2rem; cursor: pointer; padding: 0; }
+.volume-container {
+  width: 100%;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 30px;
+}
+.vol-icon { color: #06b6d4; font-size: 1.1rem; cursor: pointer; }
 .volume-slider { flex: 1; accent-color: #06b6d4; height: 4px; cursor: pointer; }
 </style>
