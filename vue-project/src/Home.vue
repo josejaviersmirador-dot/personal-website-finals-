@@ -78,9 +78,19 @@
             <router-link to="/music" class="music-link" title="Play some tunes!">
               <i class="bi bi-music-note-beamed"></i>
             </router-link>
-            <i class="bi bi-joystick"></i>
+            <i class="bi bi-joystick joystick-btn" @click="showVideo = true"></i>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div v-if="showVideo" class="video-overlay" @click.self="showVideo = false">
+      <div class="video-modal">
+        <button class="close-btn" @click="showVideo = false">&times;</button>
+        <video controls autoplay class="video-frame">
+          <source src="/video/your-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 
@@ -123,6 +133,8 @@ const entries = ref([]);
 const guestName = ref('');
 const guestMessage = ref('');
 const isSubmitting = ref(false);
+
+const showVideo = ref(false);
 
 const fetchEntries = async () => {
   const { data, error } = await supabase
@@ -380,6 +392,56 @@ onMounted(fetchEntries);
 .music-link:hover {
   color: #06b6d4;
   transform: scale(1.15);
+}
+
+.joystick-btn {
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.joystick-btn:hover {
+  color: #06b6d4;
+  transform: scale(1.15);
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-modal {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: #111b2d;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-frame {
+  width: 100%;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 @media (max-width: 992px) {
