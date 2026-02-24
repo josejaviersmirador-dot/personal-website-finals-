@@ -89,7 +89,7 @@
       <div class="comment-form">
         <input v-model="guestName" type="text" placeholder="Name">
         <textarea v-model="guestMessage" placeholder="Write your message here..."></textarea>
-        <button @click="postTobook" class="post-btn" :disabled="isSubmitting">
+        <button @click="postToBook" class="post-btn" :disabled="isSubmitting">
           {{ isSubmitting ? 'Posting...' : 'Post' }}
         </button>
       </div>
@@ -101,6 +101,10 @@
             <small style="color: #475569;">{{ new Date(entry.created_at).toLocaleDateString() }}</small>
           </div>
           <p style="margin: 0; color: #cbd5e1; font-size: 0.9rem;">{{ entry.message }}</p>
+        </div>
+        
+        <div v-if="entries.length === 0" style="text-align: center; color: #475569; padding: 20px;">
+          No messages yet. Be the first to post!
         </div>
       </div>
     </div>
