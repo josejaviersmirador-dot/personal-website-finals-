@@ -89,8 +89,8 @@
       <div class="comment-form">
         <input v-model="guestName" type="text" placeholder="Name">
         <textarea v-model="guestMessage" placeholder="Write your message here..."></textarea>
-        <button @click="post" class="post-btn" :disabled="isSubmitting">
-          {{ isSubmitting ? 'Posting...' : 'Post to Book' }}
+        <button @click="postTobook" class="post-btn" :disabled="isSubmitting">
+          {{ isSubmitting ? 'Posting...' : 'Post' }}
         </button>
       </div>
 
