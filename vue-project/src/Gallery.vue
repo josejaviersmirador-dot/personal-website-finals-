@@ -10,7 +10,7 @@
         <div class="photo-card"><img src="/image/me.jpg" alt="Me"></div>
         <div class="photo-card"><img src="/image/mirror.jpg" alt="Mirror"></div>
         <div class="photo-card"><img src="/image/side.jpg" alt="Side"></div>
-        <div class="photo-card"><img src="/image/download.jpg" alt="Hero"></div>
+        <div class="photo-card"><img src="/image/okada.jpg" alt="Hero"></div>
       </div>
     </section>
 
