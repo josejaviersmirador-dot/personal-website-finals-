@@ -85,11 +85,23 @@
     </div>
 
     <div class="card comment-section">
-      <div class="card-title"><i class="bi bi-chat-left-dots"></i> LEAVE A COMMENT</div>
+      <div class="card-title"><i class="bi bi-book"></i> TEXT BOOK</div>
       <div class="comment-form">
-        <input type="text" placeholder="Name">
-        <textarea placeholder="Write your message here..."></textarea>
-        <button class="post-btn">Post Comment</button>
+        <input v-model="guestName" type="text" placeholder="Name">
+        <textarea v-model="guestMessage" placeholder="Write your message here..."></textarea>
+        <button @click="postToBook" class="post-btn" :disabled="isSubmitting">
+          {{ isSubmitting ? 'Posting...' : 'Post to Book' }}
+        </button>
+      </div>
+
+      <div class="messages-list" style="margin-top: 25px; display: flex; flex-direction: column; gap: 15px;">
+        <div v-for="entry in entries" :key="entry.id" style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; border: 1px solid #1e293b;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: #06b6d4;">{{ entry.name }}</strong>
+            <small style="color: #475569;">{{ new Date(entry.created_at).toLocaleDateString() }}</small>
+          </div>
+          <p style="margin: 0; color: #cbd5e1; font-size: 0.9rem;">{{ entry.message }}</p>
+        </div>
       </div>
     </div>
 
@@ -98,6 +110,45 @@
     </footer>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import { supabase } from './supabase';
+
+const entries = ref([]);
+const guestName = ref('');
+const guestMessage = ref('');
+const isSubmitting = ref(false);
+
+const fetchEntries = async () => {
+  const { data, error } = await supabase
+    .from('guestbook')
+    .select('*')
+    .order('created_at', { ascending: false });
+  
+  if (!error) {
+    entries.value = data;
+  }
+};
+
+const postToBook = async () => {
+  if (!guestName.value || !guestMessage.value) return;
+  
+  isSubmitting.value = true;
+  const { error } = await supabase
+    .from('guestbook')
+    .insert([{ name: guestName.value, message: guestMessage.value }]);
+
+  if (!error) {
+    guestName.value = '';
+    guestMessage.value = '';
+    await fetchEntries();
+  }
+  isSubmitting.value = false;
+};
+
+onMounted(fetchEntries);
+</script>
 
 <style scoped>
 .portfolio-container { 
@@ -325,5 +376,11 @@
 .music-link:hover {
   color: #06b6d4;
   transform: scale(1.15);
+}
+
+@media (max-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
