@@ -12,6 +12,14 @@ html, body {
   color: white;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #app {
@@ -34,5 +42,25 @@ html, body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #06b6d4;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 14px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 13px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
 }
 </style>

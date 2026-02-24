@@ -444,9 +444,146 @@ onMounted(fetchEntries);
   z-index: 1001;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .dashboard-layout {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-card {
+    min-height: 400px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 20px;
+  }
+
+  .main-header {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .main-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-card {
+    min-height: 300px;
+  }
+
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline li {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .social-links {
+    gap: 15px;
+    font-size: 1.4rem;
+  }
+
+  .interest-icons {
+    gap: 20px;
+    font-size: 2rem;
+  }
+
+  .pill {
+    padding: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .comment-form {
+    gap: 10px;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .post-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    justify-self: stretch;
+  }
+
+  .footer {
+    padding: 15px;
+    font-size: 0.7rem;
+  }
+
+  .video-modal {
+    width: 95%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-container {
+    padding: 15px;
+  }
+
+  .main-header {
+    padding: 10px;
+  }
+
+  .main-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .social-links {
+    gap: 10px;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .interest-icons {
+    gap: 15px;
+    font-size: 1.5rem;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    font-size: 16px;
+  }
+
+  .messages-list {
+    max-height: 300px;
+    overflow-y: auto;
   }
 }
 </style>

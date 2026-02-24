@@ -560,24 +560,568 @@ body {
     transform: scale(1.05);
 }
 
-@media (max-width: 900px) {
-    body { height: auto; overflow: auto; }
-    .portfolio-container { display: flex; flex-direction: column; }
+@media (max-width: 1200px) {
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
     
-    .profile-wrapper { flex-direction: column; height: auto; }
-    .profile-left { height: 50vh; width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .profile-right { padding: 20px; gap: 10px; }
-    
-    .info-row { height: 60px; padding: 0 15px; font-size: 0.9rem; }
-    .info-label { font-size: 0.8rem; } 
-    .info-value { font-size: 0.9rem; }
-    
-    .email-container { flex-direction: column; gap: 10px; }
-    .social-profile-bar { flex-wrap: wrap; height: auto; padding: 15px; gap: 15px; }
+    .card-gallery {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+}
 
-    .gallery-page-body { padding: 20px; }
-    .gallery-main-title { font-size: 2rem; margin-bottom: 30px; }
-    .photo-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) {
+    body { 
+        height: auto; 
+        overflow: auto; 
+    }
+    
+    .portfolio-container { 
+        display: flex; 
+        flex-direction: column;
+        height: auto;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .profile-wrapper { 
+        flex-direction: column; 
+        height: auto; 
+    }
+    
+    .profile-left { 
+        height: 50vh; 
+        width: 100%; 
+        border-right: none; 
+        border-bottom: 1px solid rgba(255,255,255,0.1); 
+    }
+    
+    .profile-right { 
+        padding: 20px; 
+        gap: 10px; 
+    }
+    
+    .info-row { 
+        height: 60px; 
+        padding: 0 15px; 
+        font-size: 0.9rem; 
+    }
+    
+    .info-label { 
+        font-size: 0.8rem; 
+    } 
+    
+    .info-value { 
+        font-size: 0.9rem; 
+    }
+    
+    .email-container { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    
+    .social-profile-bar { 
+        flex-wrap: wrap; 
+        height: auto; 
+        padding: 15px; 
+        gap: 15px; 
+    }
+
+    .gallery-page-body { 
+        padding: 20px; 
+    }
+    
+    .gallery-main-title { 
+        font-size: 2rem; 
+        margin-bottom: 30px; 
+    }
+    
+    .photo-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .main-header {
+        padding: 12px;
+        grid-column: 1 / -1;
+    }
+
+    .main-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .main-header p {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 0.75rem;
+    }
+
+    .card-gallery {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .card-course .card-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .skill-tag {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .compact-list {
+        font-size: 0.9rem;
+        gap: 12px;
+    }
+
+    .interest-icons {
+        gap: 25px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .main-header {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .main-header h1 {
+        font-size: 1.3rem;
+        margin: 0 0 5px 0;
+    }
+
+    .badge-role {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .main-header p {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .card-title {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+        gap: 6px;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .compact-list {
+        font-size: 0.85rem;
+        gap: 10px;
+    }
+
+    .compact-list li {
+        padding-left: 15px;
+    }
+
+    .compact-list li::before {
+        width: 6px;
+        height: 6px;
+        left: -3px;
+        top: 5px;
+    }
+
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .card-course .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-goal p {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons i {
+        font-size: 1.2rem;
+    }
+
+    .interest-icons {
+        gap: 15px;
+        font-size: 1.5rem;
+    }
+
+    .profile-wrapper {
+        padding: 15px;
+    }
+
+    .profile-left {
+        height: 40vh;
+    }
+
+    .home-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        top: 20px;
+        left: 20px;
+    }
+
+    .profile-right {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .info-row {
+        height: auto;
+        padding: 12px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-label {
+        font-size: 0.7rem;
+    }
+
+    .info-value {
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: right;
+    }
+
+    .social-profile-bar {
+        height: auto;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .social-profile-bar a {
+        font-size: 0.85rem;
+        gap: 5px;
+    }
+
+    .social-profile-bar i {
+        font-size: 1.2rem;
+    }
+
+    .email-profile-box {
+        height: auto;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .email-profile-box i {
+        font-size: 1rem;
+    }
+
+    .gallery-page-body {
+        padding: 15px;
+    }
+
+    .gallery-main-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        gap: 8px;
+    }
+
+    .section-title i {
+        font-size: 1.4rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .photo-card {
+        border-radius: 12px;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .comment-form button {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 3px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .main-header {
+        padding: 8px;
+    }
+
+    .main-header h1 {
+        font-size: 1.1rem;
+    }
+
+    .badge-role {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+
+    .main-header p {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+
+    .card {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .card-title {
+        font-size: 0.65rem;
+        margin-bottom: 8px;
+        gap: 4px;
+    }
+
+    .card-title i {
+        font-size: 0.8rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+    }
+
+    .compact-list {
+        font-size: 0.8rem;
+        gap: 8px;
+        padding-left: 10px;
+    }
+
+    .compact-list li {
+        padding-left: 12px;
+        margin-bottom: 0;
+    }
+
+    .compact-list li::before {
+        width: 5px;
+        height: 5px;
+        left: -2px;
+        top: 4px;
+    }
+
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .card-course .card-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .card-goal p {
+        font-size: 0.85rem;
+    }
+
+    .pill {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .social-icons {
+        gap: 5px;
+        font-size: 1rem;
+    }
+
+    .interest-icons {
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    .corner-arrow {
+        font-size: 1rem;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .profile-wrapper {
+        padding: 10px;
+    }
+
+    .profile-left {
+        height: 30vh;
+    }
+
+    .profile-right {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .home-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 15px;
+        left: 15px;
+    }
+
+    .info-row {
+        padding: 10px;
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .info-label {
+        font-size: 0.65rem;
+    }
+
+    .info-label i {
+        font-size: 0.9rem;
+    }
+
+    .info-value {
+        font-size: 0.75rem;
+    }
+
+    .social-profile-bar {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .social-profile-bar a {
+        font-size: 0.7rem;
+        gap: 3px;
+    }
+
+    .social-profile-bar i {
+        font-size: 1rem;
+    }
+
+    .email-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .email-profile-box {
+        height: auto;
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+
+    .gallery-page-body {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    .gallery-main-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .fixed-btn {
+        top: 15px;
+        left: 15px;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        gap: 6px;
+    }
+
+    .section-title i {
+        font-size: 1.2rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .photo-card {
+        border-radius: 10px;
+    }
+
+    .gallery-divider {
+        margin: 20px 0;
+    }
+
+    .comment-form {
+        grid-template-columns: 1fr;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+        grid-column: 1 / -1;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .comment-form button {
+        grid-column: 1 / -1;
+        padding: 10px;
+    }
+
+    .custom-footer {
+        padding: 15px;
+        font-size: 0.65rem;
+    }
+
+    .video-modal {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .close-btn {
+        font-size: 1.5rem;
+    }
 }
 
 @keyframes badgePulse {
