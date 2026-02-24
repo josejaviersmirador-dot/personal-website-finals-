@@ -85,11 +85,11 @@
     </div>
 
     <div class="card comment-section">
-      <div class="card-title"><i class="bi bi-book"></i> TEXT BOOK</div>
+      <div class="card-title"><i class="bi bi-book"></i> GUEST BOOK</div>
       <div class="comment-form">
         <input v-model="guestName" type="text" placeholder="Name">
         <textarea v-model="guestMessage" placeholder="Write your message here..."></textarea>
-        <button @click="postToBook" class="post-btn" :disabled="isSubmitting">
+        <button @click="post" class="post-btn" :disabled="isSubmitting">
           {{ isSubmitting ? 'Posting...' : 'Post to Book' }}
         </button>
       </div>
