@@ -116,7 +116,24 @@ const tracks = {
   rock3: { label: 'Rock', title: 'Photograph', src: '/audio/rock3.mp3', color: 'linear-gradient(135deg, #434343 0%, #000000 100%)' },
   rock4: { label: 'Rock', title: 'One Last Breath', src: '/audio/rock4.mp3', color: 'linear-gradient(135deg, #434343 0%, #000000 100%)' },
   rock5: { label: 'Rock', title: 'Boulevard Of Broken Dreams', src: '/audio/rock5.mp3', color: 'linear-gradient(135deg, #434343 0%, #000000 100%)' },
-  emo: { label: 'Emo', title: 'Placeholder Emo Track', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3', color: 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)' },
+  emo1: { 
+    label: 'Emo', 
+    title: 'Misery Business', 
+    src: '/audio/emo1.mp3', 
+    color: 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)' 
+  },
+  emo2: { 
+    label: 'Emo', 
+    title: 'Welcome to the Black Parade', 
+    src: '/audio/emo2.mp3', 
+    color: 'linear-gradient(135deg, #1a1a1a 0%, #434343 100%)' 
+  },
+  emo3: { 
+    label: 'Emo', 
+    title: 'Dear Maria, Count Me In', 
+    src: '/audio/emo3.mp3', 
+    color: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)' 
+  },
   country: { label: 'Country', title: 'Placeholder Country Track', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3', color: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)' },
   hiphop: { label: 'HipHop/Rap', title: 'Placeholder Rap Track', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3', color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' },
   opm: { label: 'OPM', title: 'Placeholder OPM Track', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3', color: 'linear-gradient(135deg, #06b6d4 0%, #0369a1 100%)' }
