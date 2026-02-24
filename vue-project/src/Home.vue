@@ -104,7 +104,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { supabase } from '../supabase';
+import { supabase } from './supabase';
 
 const entries = ref([]);
 const guestName = ref('');
